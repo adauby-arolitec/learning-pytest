@@ -5,12 +5,10 @@ from flask_restful import reqparse
 from maths.basic_calcuations import BasicCalculation
 
 
-app = Flask(__name__)
-api = Api(app)
-
 parser = reqparse.RequestParser()
 parser.add_argument('first_num',type=int, default = 0)
 parser.add_argument('second_num', type=int, default = 0)
+
 
 class CalculationController(Resource):
 
@@ -26,7 +24,12 @@ class CalculationController(Resource):
         "multi_rslt": calculation.multiply(),
         "div_rslt": calculation.divide()} 
 
-api.add_resource(CalculationController, '/calculation')
+def create_app():
+    app = Flask(__name__)
+    api = Api(app)
+    api.add_resource(CalculationController, '/calculation')
+    return app
 
 if __name__ == '__main__':
+    app = create_app()
     app.run(debug=True)
