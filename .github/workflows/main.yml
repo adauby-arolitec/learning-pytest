@@ -33,8 +33,8 @@ jobs:
         run: python -m pytest
 
       # Runs a set of commands using the runners shell
-      - name: Pushing image on Doker Hub
+      - name: Pushing image on Docker Hub
         run: |
-          docker build . -t arolitec/smpp2http-orange-service:latest --quiet
+          docker build . -t arolitec/learning-pytest:latest --quiet
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker image push -a --quiet arolitec/learning-pytest
