@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Installing pytest
-        run: pip install pytest pytest-integration
+        run: pip install pytest pytest-integration flask-restful
 
       - name: Running Tests
         run: python -m pytest
