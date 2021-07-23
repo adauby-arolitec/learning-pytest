@@ -22,7 +22,8 @@ class CalculationController(Resource):
         "add_rslt": calculation.addition(),
         "subs_rslt": calculation.substract(),
         "multi_rslt": calculation.multiply(),
-        "div_rslt": calculation.divide()} 
+        "div_rslt": calculation.divide()
+        } 
 
 def create_app():
     app = Flask(__name__)

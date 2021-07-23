@@ -8,10 +8,13 @@ class BasicCalculation():
         return self._a + self._b
 
     def substract(self) -> int:
-        pass
+        return self._a - self._b
 
     def multiply(self) -> int:
         pass
+
+    def multiply(self)->int:
+        return self._a * self._b
 
     def divide(self) -> float:
         return self._a / self._b
