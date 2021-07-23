@@ -8,7 +8,7 @@ class BasicCalculation():
         return self._a + self._b
 
     def substract(self) -> int:
-        pass
+        return self._a - self._b
 
     def multiply(self)->int:
         pass
