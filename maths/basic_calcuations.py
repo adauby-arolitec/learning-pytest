@@ -11,7 +11,7 @@ class BasicCalculation():
         pass
 
     def multiply(self)->int:
-        pass
+        return self._a * self._b
 
     def divide(self) -> int:
         pass
