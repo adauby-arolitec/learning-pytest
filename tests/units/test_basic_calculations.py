@@ -36,5 +36,4 @@ class TestBacisCalculation():
 
     def test_zero_division_error(self):
         calculation = BasicCalculation(20, 0)
-        with pytest.raises(ZeroDivisionError):
-            calculation.divide()
+        assert calculation.divide() == 'Can not divide 20 by 0'
