@@ -13,5 +13,8 @@ class BasicCalculation():
     def multiply(self) -> int:
         pass
 
+    def multiply(self)->int:
+        return self._a * self._b
+
     def divide(self) -> float:
         return self._a / self._b

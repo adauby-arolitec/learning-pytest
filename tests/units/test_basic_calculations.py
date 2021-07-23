@@ -38,3 +38,17 @@ class TestBacisCalculation():
         calculation = BasicCalculation(20, 0)
         with pytest.raises(ZeroDivisionError):
             calculation.divide()
+        assert BasicCalculation(-2,-1).addition() == -3
+
+
+    def test_multiply_of_two_positive(self):
+        assert BasicCalculation(3, 4).multiply() == 12
+    
+    def test_multiply_of_two_negative(self):
+        assert BasicCalculation(-3, -4).multiply() == 12
+
+    def test_multiply_of_negative_and_positive(self):
+        assert BasicCalculation(3, -4).multiply() == -12
+    
+    def test_multiply_of_zero_and_positive(self):
+        assert BasicCalculation(0, 4).multiply() == 0
