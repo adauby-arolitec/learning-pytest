@@ -51,5 +51,15 @@ class TestBacisCalculation():
     def test_multiply_of_zero_and_positive(self):
         assert BasicCalculation(0, 4).multiply() == 0
 
+    #Diallo 
+    def test_substract_of_two_positive_numbers(self):
+        substraction = BasicCalculation(3,2)
+        assert substraction.substract() == 1
         
- 
+    def test_substract_when_first_number_is_greater_than_second(self):
+        substraction = BasicCalculation(7,2)
+        assert substraction.substract() == 5
+    
+    def test_substract_when_second_number_is_greater_than_first(self):
+        substraction = BasicCalculation(2,3)
+        assert substraction.substract() == -1  
