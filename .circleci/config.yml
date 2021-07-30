@@ -36,10 +36,9 @@ jobs:
           pip-dependency-file: requirements.txt # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
 
       - run:
-          name: Install test dependencies
-          command: pip install pytest pytest-integration flask-restful pytest-cov
-
-      - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: python -m pytest
+
+      - store_artifacts:
+          path: htmlcov
