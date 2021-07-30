@@ -1,4 +1,4 @@
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra"
+addopts = "-ra --cov=maths --cov=strings --cov-report=html --integration-cover --cov-branch --cov-fail-under=95"
 testpaths = ["tests"]
