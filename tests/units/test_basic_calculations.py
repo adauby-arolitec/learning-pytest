@@ -36,9 +36,7 @@ class TestBacisCalculation():
 
     def test_zero_division_error(self):
         calculation = BasicCalculation(20, 0)
-        with pytest.raises(ZeroDivisionError):
-            calculation.divide()
-        assert BasicCalculation(-2,-1).addition() == -3
+        assert calculation.divide() == 'Can not divide 20 by 0'
 
 
     def test_multiply_of_two_positive(self):
@@ -52,7 +50,8 @@ class TestBacisCalculation():
     
     def test_multiply_of_zero_and_positive(self):
         assert BasicCalculation(0, 4).multiply() == 0
-        
+
+    #Diallo 
     def test_substract_of_two_positive_numbers(self):
         substraction = BasicCalculation(3,2)
         assert substraction.substract() == 1
