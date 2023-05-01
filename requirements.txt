@@ -10,7 +10,7 @@ distlib==0.3.2
 et-xmlfile==1.0.1
 execnet==1.9.0
 filelock==3.0.12
-Flask==2.0.1
+Flask==2.3.2
 Flask-RESTful==0.3.9
 iniconfig==1.1.1
 isort==5.7.0
